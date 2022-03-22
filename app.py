@@ -7,7 +7,7 @@ from flask_admin.contrib.sqla import ModelView
 app = Flask(__name__)
 db.init_app(app)
 app.config['SECRET_KEY'] = 'mysecret'
-app.config['SQLALCHEMY_DATABASE_URI'] ="sqlite:///test.db"
+app.config['SQLALCHEMY_DATABASE_URI'] ="postgres://onsdzvghhzqmlg:d626aaf93e38b6f5e2bfd9436ec620a0663e402c9d153d1d3b901366067fd001@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/daelhpjvj07nd1"
 # "postgresql://sqfchhvcywmegt:1e4f30c9447087c90170fe999bdbd7cdf542f57f61dbe368baaeb2e358a62329@ec2-176-34-105-15.eu-west-1.compute.amazonaws.com:5432/d3e165le2np51u"
 # "sqlite:///test.db"
 admin = Admin(app)
