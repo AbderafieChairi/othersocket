@@ -1,10 +1,13 @@
 from flask import Flask ,jsonify,request
 from models import db,User,Room,Message,Participants
+from flask_cors import CORS
 
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
 app = Flask(__name__)
+CORS(app)
+
 db.init_app(app)
 app.config['SECRET_KEY'] = 'mysecret'
 app.config['SQLALCHEMY_DATABASE_URI'] ="postgresql://onsdzvghhzqmlg:d626aaf93e38b6f5e2bfd9436ec620a0663e402c9d153d1d3b901366067fd001@ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/daelhpjvj07nd1"
