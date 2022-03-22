@@ -16,7 +16,7 @@ admin.add_view(ModelView(Room, db.session))
 admin.add_view(ModelView(Message, db.session))
 admin.add_view(ModelView(Participants, db.session))
 
-@app.route('/<string:uid>',methods=["GET"])
+@app.route('/contacts/<string:uid>',methods=["GET"])
 def get_contacts(uid):
 	uid=int(uid)
 	contacts=[]
